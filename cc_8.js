@@ -70,3 +70,20 @@ let filterLargeTransactions = transactions.filter(amount => amount > 1000); // u
 
 console.log(filterLargeTransactions) // logs the function to the console
 
+// Task 7 - Shopping Cart Tracker
+
+function createCartTracker() { // creates function that keeps track of the value of the cart
+    let balance = 0
+    return function(amount) {
+        balance += amount; // adds the amount to the current balance
+        return `Total Cart Value: $${balance}`
+    };
+};
+
+let cart = createCartTracker();
+
+console.log(cart(20)) // logs the function to the console
+console.log(cart(35)) // logs the function to the console
+
+
+
