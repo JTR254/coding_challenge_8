@@ -53,4 +53,15 @@ const calculateRentalCost = (days, carType, insurance = false) => { // creates a
  console.log(calculateRentalCost(3, "Economy", true)) // logs the function to the console - Output: Total Rental Cost: $180.00
  console.log(calculateRentalCost(5, "Luxury", false)) // logs the function to the console - Output: Total Rental Cost: $500.00
 
- 
+ // Task 5 - Loan Payment Calculation
+
+ function calculateLoanPayment(principal, rate, time) { // creates a function that calculates interest
+    let payment;
+    return payment = principal + (principal * rate * time) // the equation is principal * rate * time
+};
+
+console.log(`Total Payment: $${calculateLoanPayment(1000, .05, 2).toFixed(2)}`) // logs the function to the console - Output: Total Payment: $1100
+console.log(`Total Payment: $${calculateLoanPayment(5000, .07, 3).toFixed(2)}`) // logs the function to the console - Output: Total Payment: $6050
+
+
+
