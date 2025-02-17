@@ -16,3 +16,17 @@ let calculateDiscount = function discount (price, discountRate) { // creates a f
 console.log (`Final Price: $${calculateDiscount(100, 0.2).toFixed(2)}`) // logs the function to the console - Output: Final Price: $80.00
 console.log (`Final Price: $${calculateDiscount(250, 0.15).toFixed(2)}`) // logs the function to the console - Output: Final Price: $212.50
 
+// Task 3 - Service Fee Calculation
+
+const calculateServiceFee = (amount, serviceType) => { // creates arrow function that determines the service fee based on the service plan
+    if (serviceType === "Premium") {
+        return amount * .15
+    } else if (serviceType === "Standard") {
+        return amount * .1
+    } else if (serviceType === "Basic") {
+        return amount * .05
+    }
+};
+
+console.log (`Service Fee: $${calculateServiceFee(200, "Premium").toFixed(2)}`) // logs the function to the console - Output: Service Fee: $30.00
+console.log (`Service Fee: $${calculateServiceFee(500, "Standard").toFixed(2)}`) // logs the function to the console - Output: Discounted Price: $50.00
