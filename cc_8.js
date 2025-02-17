@@ -85,5 +85,17 @@ let cart = createCartTracker();
 console.log(cart(20)) // logs the function to the console
 console.log(cart(35)) // logs the function to the console
 
+// Task 8 - Savings Growth Projection
 
+function calculateSavings(years, amount) { // creates function that calculates the growth of savings
+    if (years >= 10) {
+        return `Projected Savings: $${amount.toFixed(2)}`;
+    }
+    return calculateSavings(years + 1, amount * 1.05) // returns equation that as the years increase by 1, revenue increases by 5%
+    
+
+};
+
+console.log(calculateSavings(8, 1000)) // logs the function to the console
+console.log(calculateSavings(5, 5000)) // logs the function to the console
 
