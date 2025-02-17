@@ -63,5 +63,10 @@ const calculateRentalCost = (days, carType, insurance = false) => { // creates a
 console.log(`Total Payment: $${calculateLoanPayment(1000, .05, 2).toFixed(2)}`) // logs the function to the console - Output: Total Payment: $1100
 console.log(`Total Payment: $${calculateLoanPayment(5000, .07, 3).toFixed(2)}`) // logs the function to the console - Output: Total Payment: $6050
 
+// Task 6 - Identifying Large Transactions
 
+let transactions = [200, 1500, 3200, 800, 2500]; // declares an array of transactions
+let filterLargeTransactions = transactions.filter(amount => amount > 1000); // uses filter function to filter the transactions aboave 1000
+
+console.log(filterLargeTransactions) // logs the function to the console
 
