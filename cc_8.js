@@ -30,3 +30,27 @@ const calculateServiceFee = (amount, serviceType) => { // creates arrow function
 
 console.log (`Service Fee: $${calculateServiceFee(200, "Premium").toFixed(2)}`) // logs the function to the console - Output: Service Fee: $30.00
 console.log (`Service Fee: $${calculateServiceFee(500, "Standard").toFixed(2)}`) // logs the function to the console - Output: Discounted Price: $50.00
+
+// Task 4 - Car Rental Cost Calculation
+
+const calculateRentalCost = (days, carType, insurance = false) => { // creates arrow function that determines the total rental cost based on days, car type, and if they have insurance
+    let cost;
+     if (carType === "Economy") { // if the car type is "Economy", then multiply 40 by the number of days
+         cost = 40 * days
+     } else if (carType === "Standard") { // if the car type is "Standard", then multiply 60 by the number of days
+         cost = 60 * days
+     } else if (carType === "Luxury") { // if the car type is "Luxury", then multiply 100 by the number of days
+        cost = 100 * days
+     }
+ 
+     if (insurance) { // if they have insurance, add $20 per day
+         cost += 20 * days
+     }
+ 
+     return `Total Rental Cost: $${cost.toFixed(2)}`
+ };
+ 
+ console.log(calculateRentalCost(3, "Economy", true)) // logs the function to the console - Output: Total Rental Cost: $180.00
+ console.log(calculateRentalCost(5, "Luxury", false)) // logs the function to the console - Output: Total Rental Cost: $500.00
+
+ 
